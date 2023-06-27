@@ -1,0 +1,204 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a=100;
+100
+typeof a;
+'number'
+a=1000.200;
+1000.2
+typeof a;
+'number'
+a=1;
+1
+typeof a;
+'number'
+a=1111111111111111111;
+1111111111111111200
+typeof a;
+'number'
+a="Amit";
+'Amit'
+typeof a;
+'string'
+a = 'Amit';
+'Amit'
+typeof a;
+'string'
+a='A';
+'A'
+typeof a;
+'string'
+a=`Amit`;
+'Amit'
+typeof a;
+'string'
+a="Let's do it ";
+"Let's do it "
+a= `hgdjksghjkdfgkdh
+ghsdkj
+Hjgghdkjfghkd`;
+'hgdjksghjkdfgkdh\nghsdkj\nHjgghdkjfghkd'
+a=10;
+10
+var b=20;
+undefined
+console.log("A is "+a+" And B is "+b);
+VM569:1 A is 10 And B is 20
+undefined
+console.log(`A is ${a} and B is ${b}`);
+VM698:1 A is 10 and B is 20
+undefined
+a = 10;
+10
+b = "20";
+'20'
+typeof a;
+'number'
+typeof b;
+'string'
+b = "10";
+'10'
+a==b;
+true
+a===b;
+false
+10 + "10";
+'1010'
+10 + parseInt("10");
+20
+10 + parseFloat("10.30");
+20.3
+10  + Number("10");
+20
+typeof Number;
+'function'
+typeof parseInt;
+'function'
+10 - "10"
+0
+"Amit " + " Srivastava";
+'Amit  Srivastava'
+"Amit " - " Srivastava";
+NaN
+10 - undefined;
+NaN
+undefined + undefined;
+NaN
+typeof NaN;
+'number'
+var e = undefined + 10;
+undefined
+e;
+NaN
+isNaN(e)?0:e;
+0
+e = 10/0;
+Infinity
+typeof e;
+'number'
+isFinite(e);
+false
+isFinite(e)?e:0;
+0
+var att = true;
+undefined
+typeof att;
+'boolean'
+att + 10;
+11
+true + true - false;
+2
+true + "hi";
+'truehi'
+a = Number.MAX_SAFE_INTEGER;
+9007199254740991
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+typeof a;
+'number'
+a= 9007199254740992n;
+9007199254740992n
+typeof a;
+'bigint'
+a + 1111;
+VM1987:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:3
+(anonymous) @ VM1987:1
+a + 1111n;
+9007199254742103n
+a=BigInt("53454354353453534534534");
+53454354353453534534534n
+typeof BigInt
+'function'
+var t ;
+undefined
+typeof t;
+'undefined'
+t =5;
+5
+typeof t;
+'number'
+t = null;
+null
+typeof t;
+'object'
+//undefined vs null
+undefined
+var r = 100;
+undefined
+var w = [10,20,30,40,50];
+undefined
+w;
+(5) [10, 20, 30, 40, 50]
+var d = w;
+undefined
+d[0];
+10
+w[0];
+10
+d[0] = 11111;
+11111
+w[0];
+11111
+w;
+(5) [11111, 20, 30, 40, 50]
+d;
+(5) [11111, 20, 30, 40, 50]
+w = null;
+null
+typeof w;
+'object'
+w;
+null
+d;
+(5) [11111, 20, 30, 40, 50]
+Symbol()
+Symbol()
+Symbol() === Symbol();
+false
+var obj = {};
+undefined
+typeof obj;
+'object'
+var arr = [10,20,30];
+undefined
+typeof obj;
+'object'
+typeof arr;
+'object'
+arr instanceof Array;
+true
+Object;
+ƒ Object() { [native code] }
+Array;
+ƒ Array() { [native code] }
+arr instanceof Array;
+true
