@@ -1,0 +1,26 @@
+Data Types
+Immutable Type / Value Type
+a) undefined
+b) number (0-9) Decimal (Error Value - NaN, Infinity) 
+Number functions
+parseInt, parseFloat, Number, isNaN,
+c) string “ ‘ ` (String Interpolation) e.g ${}
+D) boolean
+E) bigint (ES 2020) - Literal or BigInt Function
+F) null
+G) Symbol (ES6 Rare to Use)
+
+
+Mutable (Reference)
+a) Array [] Specific
+b) object {} Generic
+
+[] vs {}
+
+== vs ===
+String + Number = String
+B + N = N
+B + B = N
+B + S = S
+
+
