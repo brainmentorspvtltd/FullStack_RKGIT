@@ -1,0 +1,51 @@
+function show(){
+    console.log("I am the Show ");
+}
+undefined
+show();
+VM224:2 I am the Show 
+undefined
+function show(){
+    console.log("I am the Show ");
+    return 100;
+}
+undefined
+show();
+VM260:2 I am the Show 
+100
+disp();
+function disp(){
+    console.log("I am the disp ");
+    return 100;
+}
+VM302:3 I am the disp 
+100
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+typeof window;
+'object'
+window.disp;
+ƒ disp(){
+    console.log("I am the disp ");
+    return 100;
+}
+disp(); 
+VM302:3 I am the disp 
+100
+window.disp();
+VM302:3 I am the disp 
+100
+var w = [10,20];
+undefined
+typeof w;
+'object'
+typeof window;
+'object'
+w instance of Array;
+VM654:1 Uncaught SyntaxError: Unexpected identifier 'instance'
+w instanceof Array;
+true
+window instanceof Window;
+true
+window instanceof Object;
+true

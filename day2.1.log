@@ -1,0 +1,216 @@
+var a = [10,20,30];
+undefined
+typeof a;
+'object'
+a instanceof Array;
+true
+typeof Array;
+'function'
+a instanceof Object;
+true
+typeof Object;
+'function'
+Array.constructor;
+ƒ Function() { [native code] }
+Object.constructor;
+ƒ Function() { [native code] }
+a.push(1000);
+4
+a;
+(4) [10, 20, 30, 1000]
+a.pop();
+1000
+a;
+(3) [10, 20, 30]
+a.unshift(2000);
+4
+a;
+(4) [2000, 10, 20, 30]
+a.shift();
+2000
+a;
+(3) [10, 20, 30]
+a;
+(3) [10, 20, 30]
+a.splice(1);
+(2) [20, 30]
+a;
+[10]
+a = [10,20,30,40,50];
+(5) [10, 20, 30, 40, 50]
+a.splice(1,1);
+[20]
+a;
+(4) [10, 30, 40, 50]
+a;
+(4) [10, 30, 40, 50]
+a.splice(1,1,8888);
+[30]
+a;
+(4) [10, 8888, 40, 50]
+a.splice(1,1,100,200,300);
+[8888]
+a;
+(6) [10, 100, 200, 300, 40, 50]
+a.splice(1,0,7777);
+[]
+a;
+(7) [10, 7777, 100, 200, 300, 40, 50]
+for(var i = 0; i<a.length; i++){
+    console.log(a[i]);
+}
+VM1177:2 10
+VM1177:2 7777
+VM1177:2 100
+VM1177:2 200
+VM1177:2 300
+VM1177:2 40
+VM1177:2 50
+undefined
+var phones= [1111,2222,3333,4444,5555,7777,8888,222];
+undefined
+var phoneObj = {"ram":[1111,2333], "shyam":2222};
+undefined
+phoneObj["ram"];
+(2) [1111, 2333]
+typeof phoneObj;
+'object'
+phoneObj instanceof Array;
+false
+phoneObj instanceof Object;
+true
+phoneObj;
+{ram: Array(2), shyam: 2222}
+phoneObj['ram'] = [888888,333333];
+(2) [888888, 333333]
+phoneObj['ram'];
+(2) [888888, 333333]
+var w = phoneObj['ram']  ;
+undefined
+w;
+(2) [888888, 333333]
+w.push(11111);
+3
+w;
+(3) [888888, 333333, 11111]
+phoneObj['ram'];
+(3) [888888, 333333, 11111]
+var t = ...phoneObj['ram'];
+VM1867:1 Uncaught SyntaxError: Unexpected token '...'
+var t = ...(phoneObj['ram']);
+VM1872:1 Uncaught SyntaxError: Unexpected token '...'
+var t = [...phoneObj['ram']];
+undefined
+t;
+(3) [888888, 333333, 11111]
+phoneObj['ram'];
+(3) [888888, 333333, 11111]
+t[0]=222;
+222
+t;
+(3) [222, 333333, 11111]
+phoneObj['ram'];
+(3) [888888, 333333, 11111]
+var x = [10,20,30,40];
+undefined
+var y =[100,200,300];
+undefined
+var z = [x,y];
+undefined
+z;
+(2) [Array(4), Array(3)]
+z[0];
+(4) [10, 20, 30, 40]
+z[0][0];
+10
+var z2 = [...x,...y];
+undefined
+z2;
+(7) [10, 20, 30, 40, 100, 200, 300]
+z;
+(2) [Array(4), Array(3)]
+var q = {id:1001, name:'Ram'};
+undefined
+var q2 = {id:1002, salary:8888, bonus:1111};
+undefined
+var a = {"one":q,"two":q2};
+undefined
+a;
+{one: {…}, two: {…}}one: {id: 1001, name: 'Ram'}two: {id: 1002, salary: 8888, bonus: 1111}[[Prototype]]: Object
+a['one']['name'];
+'Ram'
+var a = {...q,...q2};
+undefined
+a;
+{id: 1002, name: 'Ram', salary: 8888, bonus: 1111}
+a['id'];
+1002
+a.id;
+1002
+a.dept="IT";
+'IT'
+a;
+{id: 1002, name: 'Ram', salary: 8888, bonus: 1111, dept: 'IT'}
+delete a.bonus;
+true
+a;
+{id: 1002, name: 'Ram', salary: 8888, dept: 'IT'}
+delete a.yyyy;
+true
+var dhoni = {"name":'MS', "age":42, 6:200,4:500,50:51,100:10};
+undefined
+dhoni.name;
+'MS'
+dhoni.50;
+VM2661:1 Uncaught SyntaxError: Unexpected number
+dhoni[50]
+51
+dhoni.number of wins=100;
+VM2775:1 Uncaught SyntaxError: Unexpected identifier 'of'
+dhoni.["number of wins"]=100;
+VM2783:1 Uncaught SyntaxError: Unexpected token '['
+dhoni["number of wins"]=100;
+100
+dhoni;
+{4: 500, 6: 200, 50: 51, 100: 10, name: 'MS', age: 42, number of wins: 100}
+dhoni['number of wins'];
+100
+var key = 'age';
+undefined
+dhoni.key;
+undefined
+dhoni[key];
+42
+for(var key in dhoni){
+    console.log(key);
+}
+VM3076:2 4
+VM3076:2 6
+VM3076:2 50
+VM3076:2 100
+VM3076:2 name
+VM3076:2 age
+VM3076:2 number of wins
+undefined
+for(var key in dhoni){
+    console.log(key, dhoni[key]);
+}
+VM3125:2 4 500
+VM3125:2 6 200
+VM3125:2 50 51
+VM3125:2 100 10
+VM3125:2 name MS
+VM3125:2 age 42
+VM3125:2 number of wins 100
+undefined
+var arr = [10,20,30,40,50];
+undefined
+for(var element of arr){
+    console.log(element);
+}
+VM3331:2 10
+VM3331:2 20
+VM3331:2 30
+VM3331:2 40
+VM3331:2 50
+undefined
