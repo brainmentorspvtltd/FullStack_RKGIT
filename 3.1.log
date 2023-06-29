@@ -1,0 +1,122 @@
+function show(){
+    var x = 10;
+    var x = 20;
+    var x = 30;
+    if(x>1){
+    var x = 100;
+}
+    for(var x = 1; x<=10; x++){
+        
+    }
+    var x = 1000;
+}
+undefined
+show();
+undefined
+function show(){
+    var x = 10;
+    var x = 20;
+    var x = 30;
+    if(x>1){
+    var x = 100;
+}
+    for(var x = 1; x<=10; x++){
+        
+    }
+    console.log(x);
+    var x = 1000;
+    console.log(x);
+}
+undefined
+show();
+VM288:11 11
+VM288:13 1000
+undefined
+function show(){
+    // var x ;
+    console.log('X is ', x);
+    var x = 10;
+    var x = 20;
+    var x = 30;
+    if(x>1){
+    var x = 100;
+}
+    for(var x = 1; x<=10; x++){
+        
+    }
+    console.log(x);
+    var x = 1000;
+    console.log(x);
+}
+undefined
+show();
+VM352:3 X is  undefined
+VM352:13 11
+VM352:15 1000
+undefined
+var add;
+undefined
+window.add;
+undefined
+function add(){}
+undefined
+window.add;
+ƒ add(){}
+function adder(x,y){
+    return x + y;
+}
+undefined
+adder(10,2);
+12
+adder(10);
+NaN
+10 + undefined;
+NaN
+undefined + undefined;
+NaN
+function adder(x,y){
+    return x + y;
+}
+undefined
+adder();
+NaN
+adder("","");
+''
+adder(10, null);
+10
+function adder(x,y){
+    
+    return x||0 + y||0;
+}
+undefined
+add();
+undefined
+function adder(x,y){
+    x = x ||0;
+    y = y || 0;
+    return x + y;
+}
+undefined
+adder();
+0
+adder(10);
+10
+adder(10,20);
+30
+function adder(x=0,y=0){
+   
+    return x + y;
+}
+undefined
+adder();
+0
+function adder(x,y){
+    x = x ||0;
+    y = y || 0;
+    return x + y;
+}
+undefined
+adder(10 , false);
+10
+adder('','');
+0

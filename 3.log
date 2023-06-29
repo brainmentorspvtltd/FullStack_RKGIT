@@ -1,0 +1,226 @@
+var x = 100;
+undefined
+typeof x;
+'number'
+typeof (x);
+'number'
+typeof ((((x))));
+'number'
+var name = "Amit";
+undefined
+typeof name;
+'string'
+name.length;
+4
+name.toUpperCase();
+'AMIT'
+var x = 100;
+undefined
+x;
+100
+typeof x;
+'number'
+var y = new Number(100):
+VM333:1 Uncaught SyntaxError: Unexpected token ':'
+var y = new Number(100);
+undefined
+typeof y;
+'object'
+y instanceof Number;
+true
+typeof Number;
+'function'
+x.toString();
+'100'
+x;
+100
+typeof x;
+'number'
+y;
+Number {100}
+var name = "AMIT";
+undefined
+typeof name;
+'string'
+var name2 = new String("Amit");
+undefined
+typeof name2;
+'object'
+name2 instanceof String;
+true
+name instanceof String;
+false
+typeof String;
+'function'
+function add(){
+    console.log("I am the Add ");
+}
+undefined
+window;
+Window {window: Window, self: Window, document: document, name: 'AMIT', location: Location, …}
+window.add();
+VM990:2 I am the Add 
+undefined
+add();
+VM990:2 I am the Add 
+undefined
+var obj = {
+    add(){
+        console.log("I am the obj add ");
+    }
+}
+undefined
+obj.add();
+VM1132:3 I am the obj add 
+undefined
+window.obj.add();
+VM1132:3 I am the obj add 
+undefined
+function add(){
+    console.log("I am the Add ");
+}
+undefined
+add(10,20);
+VM1254:2 I am the Add 
+undefined
+add("Amit");
+VM1254:2 I am the Add 
+undefined
+add(true);
+VM1254:2 I am the Add 
+undefined
+add(1,2,3,4,4);
+VM1254:2 I am the Add 
+undefined
+console.dir(add);
+VM1488:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1254:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+    console.log("I am the Add ", arguments.length);
+}
+undefined
+add(1,2,3,4,4);
+VM1577:2 I am the Add  5
+undefined
+add(1,2);
+VM1577:2 I am the Add  2
+undefined
+add();
+VM1577:2 I am the Add  0
+undefined
+add("1",2,[3,4]);
+VM1577:2 I am the Add  3
+undefined
+add("1",2,[3,4], function disp(){});
+VM1577:2 I am the Add  4
+undefined
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + arguments[i];
+}
+    return sum;
+}
+undefined
+typeof add;
+'function'
+add();
+0
+add(1,2);
+3
+add(1,2,3,4,5);
+15
+add(1,2,3,"4",5);
+'645'
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + parseInt(arguments[i]);
+}
+    return sum;
+}
+undefined
+add(1,2,3,"4",5);
+15
+add(1,2,"ram","4",5);
+NaN
+parseInt("ram");
+NaN
+NaN + 10
+NaN
+NaN == NaN;
+false
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(1,2,"ram","4",5);
+12
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
+add(1,"2",3,one, two, "ram");
+6
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i] ==='function'){
+            arguments[i] =  arguments[i]();
+        }
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(1,"2",3,one, two, "ram");
+9
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i] ==='function'){
+            arguments[i] =  arguments[i]();
+        }
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+function add(...arg){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arg.length; i++){
+        if(typeof arg[i] ==='function'){
+            arg[i] =  arg[i]();
+        }
+    sum = sum + (isNaN(parseInt(arg[i]))?0:parseInt(arg[i]));
+}
+    return sum;
+}
+undefined
+add(1,"2",3,one, two, "ram");
+9
+function show(x,y=0,...z){
+    console.log(x, y , z);
+}
+undefined
+show(10,20,30,40,50);
+VM2565:2 10 20 (3) [30, 40, 50]0: 301: 402: 50length: 3[[Prototype]]: Array(0)
+undefined
+function show(x,y=0,...z){
+    console.log(x, y , z);
+}
+undefined

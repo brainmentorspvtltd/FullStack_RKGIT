@@ -1,0 +1,20 @@
+var x;
+undefined
+x?"Truthy Value ":" Falsy Value";
+' Falsy Value'
+x =10;
+10
+x?"Truthy Value ":" Falsy Value";
+'Truthy Value '
+x="";
+''
+x?"Truthy Value ":" Falsy Value";
+' Falsy Value'
+x="Amit";
+'Amit'
+x?"Truthy Value ":" Falsy Value";
+'Truthy Value '
+x = undefined;
+undefined
+x?"Truthy Value ":" Falsy Value";
+' Falsy Value'
