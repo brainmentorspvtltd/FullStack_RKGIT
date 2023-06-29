@@ -1,0 +1,21 @@
+Function 
+1. Weakly Type in Function
+e.g add() - 0
+add(10,20) 30
+add(10,20,30) 60
+add(10,20,30,40,50,60)
+add(10,”20”,30,”four”, “one”)
+add(10,[20,”30”,one],”40”,”four”,five)
+function one(){
+return 1;
+}
+function five(){
+return “5”;
+}
+ES6 (2015)
+Function with Default Arguments
+Function with Rest Arguments
+Rest vs Spread
+
+Undefined, NaN, 0 , false, null ,’’ - FALSY
+Truthy
