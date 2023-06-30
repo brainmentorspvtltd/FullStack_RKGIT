@@ -1,0 +1,54 @@
+
+1.Write a function calculate that takes three arugments from the user, say num1 , num2, and operation(1==add, 2==subtract, 
+3==multiply, 4==divide ).Don`t use switch statement or if else statements
+ 
+1.add,
+2.subtract,
+3.multiply,
+4.divide 
+
+write the calc function for all the operations
+
+===========================================
+
+2 . Create a function Named Triangle which takes 3 parameters, say A, B and C denoting the 3 sides of a triangle.
+Use Callback function, create a method to check if the triangle is Equilateral or not.
+
+
+Output:
+"true" if the triangle is equilateral and "false" if its not.
+
+==========================================
+
+3.Given two strings, return true if they are anagrams of one another
+
+For example: Mary is an anagram of Army
+
+==========================================
+
+
+4. Create a function Employee, having id, name, basic_Salary as arguments.
+
+Compute HRA, DA, TA, GS, NS.
+
+HRA is 30% of Basic Salary.
+DA is 10% of Basic Salary.
+TA is 20% of Basic Salary.
+
+GS = Basic Salary + HRA + DA + TA;
+
+TAX DEDUCTION is 10% of GS.
+
+NS = GS - TAX DEDUCTION.
+
+NOte : Use Basic Salary in Lexical Scope 
+Print salary slip of the employee.
+
+===================================================
+
+15. Write a function to find the maximum and minimum elements in an array.
+arr = [10,3,15,-1,9,6]
+
+output = maxno. : 15
+			minno. : -1
+
