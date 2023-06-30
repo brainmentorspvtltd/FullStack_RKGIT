@@ -1,0 +1,192 @@
+var z = 100;
+undefined
+var d = new Number(100);
+undefined
+typeof d;
+'object'
+typeof z;
+'number'
+function show(...arg){
+var sum = 0;
+    for(let e of arg){
+        sum = sum + e;
+    }
+    return sum;
+}
+undefined
+show(10,20);
+30
+show();
+0
+show(1,2,3,4,5,6);
+21
+function show(){
+var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+show();
+0
+show(10,20):
+VM588:1 Uncaught SyntaxError: Unexpected token ':'
+show(10,20);
+30
+show;
+ƒ show(){
+var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+typeof show;
+'function'
+console.dir(show);
+VM761:1 ƒ show()arguments: nullcaller: nulllength: 0name: "show"prototype: {constructor: ƒ}[[FunctionLocation]]: VM525:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+var arr = [];
+undefined
+var w = {id:1001};
+undefined
+arr.length;
+0
+w.length;
+undefined
+arr.length;
+0
+w.length;
+undefined
+function add(){
+    console.log('I am a Named Function ');
+}
+undefined
+add();
+VM1067:2 I am a Named Function 
+undefined
+var x = 10;
+var adder = function(){}; // Anonymous Fn / Function Expression
+undefined
+typeof adder;
+'function'
+adder();
+undefined
+adder;
+ƒ (){}
+add();
+VM1067:2 I am a Named Function 
+undefined
+window.add(); 
+VM1067:2 I am a Named Function 
+undefined
+add = 100;
+100
+add();
+VM1431:1 Uncaught TypeError: add is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM1431:1
+function Calc(){
+    // var add = undefined; // Declare
+    // add = function(){} // Assign
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+        return x - y;
+    }
+    return [add, sub];
+}
+undefined
+Calc()[0](10,2);
+12
+Calc()[1](10,2);
+8
+import
+VM1747:1 Uncaught SyntaxError: Cannot use import statement outside a module
+export
+VM1761:1 Uncaught SyntaxError: Unexpected token 'export'
+function Calc(){
+    // var add = undefined; // Declare
+    // add = function(){} // Assign
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+undefined
+Calc();
+{add: ƒ, sub: ƒ}
+Calc().add(10,20);
+30
+Calc().sub(10,20);
+-10
+Calc()['sub'](10,20);
+-10
+function Calc(){
+    // var add = undefined; // Declare
+    // add = function(){} // Assign
+    var add = function(x=0,y=0){
+        return x + y;
+    }
+    var sub = function(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+undefined
+Calc().add();
+0
+//var m = 100;
+function Calc(m){
+    // var add = undefined; // Declare
+    // add = function(){} // Assign
+    var add = function(x=0,y=0){
+        return x + y + m;
+    }
+    var sub = function(x,y){
+        return x - y -m;
+    }
+    return {add, sub};
+}
+
+undefined
+var obj = Calc(100);
+undefined
+obj.add(1,2);
+103
+obj.sub(1,2);
+-101
+obj;
+{add: ƒ, sub: ƒ}add: ƒ (x=0,y=0)sub: ƒ (x,y)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+console.dir(obj);
+VM2155:1 Objectadd: ƒ (x=0,y=0)arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1945:5[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (Calc) {m: 100}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}sub: ƒ (x,y)[[Prototype]]: Object
+undefined
+function evenOdd(num){
+    return num%2==0?"Even No "+num: " Odd No "+num;
+}
+function cube(num){
+    return num**3;
+}
+function loop(n, fn){
+    for(var i = 1; i<=n; i++){
+        console.log(fn(i));
+    }
+}
+loop(5,evenOdd);
+loop(5,cube);
+VM2467:9  Odd No 1
+VM2467:9 Even No 2
+VM2467:9  Odd No 3
+VM2467:9 Even No 4
+VM2467:9  Odd No 5
+VM2467:9 1
+VM2467:9 8
+VM2467:9 27
+VM2467:9 64
+VM2467:9 125
+undefined

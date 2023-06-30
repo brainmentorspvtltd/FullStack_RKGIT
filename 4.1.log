@@ -1,0 +1,28 @@
+show();
+function show(){
+console.log("I am Declare and I am Host ");
+}
+VM139:3 I am Declare and I am Host 
+undefined
+a();
+var a= function(){
+console.log("I am Anonymous ");
+}
+VM287:1 Uncaught TypeError: a is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM287:1
+var arr = [10,20,30,40,50];
+undefined
+arr.map(function(element){
+    return element + element * 0.18;
+});
+(5) [11.8, 23.6, 35.4, 47.2, 59]
+var t = arr.map(function(element){
+    return element + element * 0.18;
+});
+undefined
+t;
+
+(5) [11.8, 23.6, 35.4, 47.2, 59]
+arr;
+(5) [10, 20, 30, 40, 50]
