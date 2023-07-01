@@ -1,0 +1,262 @@
+var counter = 0;
+function count(){
+    counter++;
+    return counter;
+}
+undefined
+count();
+1
+count();
+2
+count();
+3
+counter;
+3
+counter = "AMIT";
+'AMIT'
+count();
+NaN
+function init(){
+var c = 0; // Scope limited to init
+function mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+    return mycount;
+}
+undefined
+var fn = init();
+undefined
+fn;
+ƒ mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+fn();
+5
+console.dir(fn);
+VM527:1 ƒ mycount()arguments: nullcaller: nulllength: 0name: "mycount"prototype: {constructor: ƒ}[[FunctionLocation]]: VM410:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (init) {c: 5}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+mycount();
+VM553:1 Uncaught ReferenceError: mycount is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM553:1
+fn();
+6
+fn();
+7
+fn();
+8
+c;
+VM593:1 Uncaught ReferenceError: c is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM593:1
+function disp(a){
+    function output(b){
+        function show(c){
+            return a + b + c;
+        }
+        return show;
+    }
+    return output;
+}
+undefined
+disp(10)(20)(30);
+60
+function init(){
+var c = 0; // Scope limited to init
+function mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+    return mycount;
+}
+undefined
+var fn = init();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+var fn = init();
+undefined
+fn();
+1
+fn();
+2
+var t = (function (){
+var c = 0; // Scope limited to init
+function mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+    return mycount;
+})();
+undefined
+t();
+1
+t();
+2
+t();
+3
+t();
+4
+t();
+5
+var t = function (){
+var c = 0; // Scope limited to init
+function mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+    return mycount;
+};
+undefined
+vat b = t();
+VM956:1 Uncaught SyntaxError: Unexpected identifier 'b'
+b();
+VM970:1 Uncaught ReferenceError: b is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM970:1
+var b = t();
+undefined
+b();
+1
+b();
+2
+b();
+3
+t();
+ƒ mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+var b = t();
+undefined
+b();
+1
+b();
+2
+var t = (function (){
+var c = 0; // Scope limited to init
+function mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+    return mycount;
+})();
+undefined
+t;
+ƒ mycount(){ // scope limited to init
+    c++;
+    return c;
+}
+t();
+1
+t();
+2
+t();
+3
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x, y){
+        return x - y;
+    }
+    return add, sub;
+}
+undefined
+Calc();
+ƒ (x, y){
+        return x - y;
+    }
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x, y){
+        return x - y;
+    }
+    return [add, sub];
+}
+undefined
+Calc();
+(2) [ƒ, ƒ]0: ƒ (x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1268:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]1: ƒ (x, y)length: 2[[Prototype]]: Array(0)
+Calc()[0];
+ƒ (x,y){
+        return x + y;
+    }
+function Calc(){
+    var add = function adder(x,y){
+        return x + y;
+    }
+    var sub = function subtract(x, y){
+        return x - y;
+    }
+    return [add, sub];
+}
+undefined
+Calc();
+(2) [ƒ, ƒ]0: ƒ adder(x,y)1: ƒ subtract(x, y)length: 2[[Prototype]]: Array(0)
+function Calc(){
+    var add = function adder(x,y){
+        return x + y;
+    }
+    var sub = function subtract(x, y){
+        return x - y;
+    }
+    return {add, sub};
+}
+undefined
+Calc().add(10,20);
+30
+Calc();
+{add: ƒ, sub: ƒ}add: ƒ adder(x,y)sub: ƒ subtract(x, y)[[Prototype]]: Object
+function add(x,y){
+    return x + y;
+}
+undefined
+var adder = (x,y)=>x+y;
+undefined
+var add2 = function(x,y){
+    return x + y;
+}
+undefined
+var adder2 = (x,y)=>{
+    console.log(x,y);
+    return x+y;
+}
+undefined
+const addition = (x,y)=>x+y;
+undefined
+typeof addition;
+'function'
+addition(10,20);
+30
+addition = 100;
+VM1814:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:10
+(anonymous) @ VM1814:1
+const arr  = [10,20];
+undefined
+arr.push(100);
+3
+arr;
+(3) [10, 20, 100]
+arr = [1000,2000];
+VM1966:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM1966:1
