@@ -1,0 +1,196 @@
+class Note{}
+undefined
+typeof Note;
+'function'
+function Notes(){
+    console.log(" i am the Notes Function ");
+}
+undefined
+Notes();
+VM147:2  i am the Notes Function 
+undefined
+function Notes(){
+   // console.log(" i am the Notes Function 
+    const note = {};
+    note.id = 1001;
+    note.title = 'Abcd';
+    return note;
+    
+}
+undefined
+const obj = Notes();
+undefined
+console.log(obj);
+VM408:1 {id: 1001, title: 'Abcd'}
+undefined
+function Notes(){
+  
+    
+}
+const note = new Notes();
+undefined
+note;
+Notes {}
+obj;
+{id: 1001, title: 'Abcd'}
+const obj2 = {};
+undefined
+obj2;
+{}
+note instanceof Notes;
+true
+const MyNote = ()=>100;
+undefined
+const w = new MyNote();
+VM675:1 Uncaught TypeError: MyNote is not a constructor
+    at <anonymous>:1:11
+(anonymous) @ VM675:1
+function Notes(){
+  console.log('I am ', this);
+    
+}
+const note = new Notes();
+VM745:2 I am  Notes {}
+undefined
+note;
+Notes {}
+function Notes(){
+    // this - Note{}
+  console.log('I am ', this);
+    
+}
+const note = new Notes();
+VM779:3 I am  Notes {}
+undefined
+Notes.constructor;
+ƒ Function() { [native code] }
+function Notes(){
+    // this - Note{}
+  console.log('I am ', this);
+    this.id = 1001;
+    this.name= 'Abcd';
+    
+}
+const note = new Notes();
+VM853:3 I am  Notes {}
+undefined
+note;
+Notes {id: 1001, name: 'Abcd'}
+Notes.constructor;
+ƒ Function() { [native code] }
+const AnotherNote = ()=>{
+    console.log('I am ',this);
+}
+undefined
+AnotherNote(); // Fn call
+VM1015:2 I am  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+this;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+window ==this;
+true
+const w = new AnotherNote();
+VM1255:1 Uncaught TypeError: AnotherNote is not a constructor
+    at <anonymous>:1:11
+(anonymous) @ VM1255:1
+var obj = {
+    arr:[1,2,3,4,5,6,7,8,9],
+    even:[],
+    odd:[],
+    // evenOdd:function(){}
+    evenOdd(){ // ES6 Object ShortHand
+        this.arr.forEach(function(a){
+            if(a%2==0){
+                this.even.push(a);
+            }
+            else{
+                this.odd.push(a);
+            }
+        })
+    }
+}
+VM1529:1 Uncaught SyntaxError: Identifier 'obj' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM1529:1
+var obj3 = {
+    arr:[1,2,3,4,5,6,7,8,9],
+    even:[],
+    odd:[],
+    // evenOdd:function(){}
+    evenOdd(){ // ES6 Object ShortHand
+        this.arr.forEach(function(a){
+            if(a%2==0){
+                this.even.push(a);
+            }
+            else{
+                this.odd.push(a);
+            }
+        })
+    }
+}
+undefined
+obj3;
+{arr: Array(9), even: Array(0), odd: Array(0), evenOdd: ƒ}
+obj3.evenOdd();
+VM1532:12 Uncaught TypeError: Cannot read properties of undefined (reading 'push')
+    at <anonymous>:12:26
+    at Array.forEach (<anonymous>)
+    at Object.evenOdd (<anonymous>:7:18)
+    at <anonymous>:1:6
+(anonymous) @ VM1532:12
+evenOdd @ VM1532:7
+(anonymous) @ VM1589:1
+var obj3 = {
+    arr:[1,2,3,4,5,6,7,8,9],
+    even:[],
+    odd:[],
+    // evenOdd:function(){}
+    evenOdd(){ // ES6 Object ShortHand
+        const that = this;
+        this.arr.forEach(function(a){
+            if(a%2==0){
+                that.even.push(a);
+            }
+            else{
+                that.odd.push(a);
+            }
+        })
+    }
+}
+undefined
+obj3.evenOdd();
+undefined
+obj3;
+{arr: Array(9), even: Array(4), odd: Array(5), evenOdd: ƒ}arr: (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]even: (4) [2, 4, 6, 8]evenOdd: ƒ evenOdd()odd: (5) [1, 3, 5, 7, 9][[Prototype]]: Object
+var obj3 = {
+    arr:[1,2,3,4,5,6,7,8,9],
+    even:[],
+    odd:[],
+    // evenOdd:function(){}
+    evenOdd(){ // ES6 Object ShortHand
+        
+        this.arr.forEach((a)=>{
+            if(a%2==0){
+                this.even.push(a);
+            }
+            else{
+                this.odd.push(a);
+            }
+        })
+    }
+}
+undefined
+obj3.even.length=0;
+0
+obj3.odd.length=0;
+0
+obj3;
+{arr: Array(9), even: Array(0), odd: Array(0), evenOdd: ƒ}
+obj3.evenOdd();
+undefined
+obj3;
+{arr: Array(9), even: Array(4), odd: Array(5), evenOdd: ƒ}arr: (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]even: (4) [2, 4, 6, 8]evenOdd: evenOdd(){ // ES6 Object ShortHand                  this.arr.forEach((a)=> {…}odd: (5) [1, 3, 5, 7, 9][[Prototype]]: Object
