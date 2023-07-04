@@ -1,0 +1,50 @@
+
+Delete Operation
+1. Icon must be clickable - done
+2. Add Click Event (this) - Icon—> Parent —> TD —> parent—> TR , Tr Color Set Red.
+3. Every Object has key isMarked =false
+4. Icon has Id , so Fetch the Id and Search it in Array e.g find, U get an Object , object isMarked = true.
+5. Count Mark - Count those object in array whose isMarked = true , Opposite UnMark
+Total - CountMark
+Delete Button by default disable
+When Count Mark is >0 then only delete button enable.
+When Delete Button Click so it will delete those records whose isMarked = true
+Hint : Filter
+ 
+
+
+
+
+Show Counts on Load
+Step-1 Place Span in index.html
+ <h3>Total Records <span id="total"></span>  Mark Records <span id="marktotal"></span>  UnMark Records <span id="unmarktotal"></span></h3>
+
+Step-2 Add Methods in service
+total(){
+    return this.notes.length;
+ },
+ markTotal(){
+    return 0;
+ },
+ unMarkTotal(){
+    return 0;
+ }
+
+Step-3 Call in Controller
+import {noteOperations} from '../services/note-service.js'
+window.addEventListener('load', init);
+function init(){
+    showCounts();
+}
+function showCounts(){
+    document.querySelector('#total').innerText 
+    = noteOperations.total();
+    document.querySelector('#marktotal').innerText 
+    = noteOperations.markTotal();
+    document.querySelector('#unmarktotal').innerText 
+    = noteOperations.unMarkTotal();
+    
+}
+
+
+
