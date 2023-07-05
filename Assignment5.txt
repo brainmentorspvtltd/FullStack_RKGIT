@@ -1,0 +1,4 @@
+Perform the Following Operations on Note Taking App
+1. Sort (By Title, By Date)
+2. Search (By Id, By Title)
+3. Update Operation
