@@ -1,0 +1,2 @@
+Print List of Notes in a List Component.
+Also Show Total Notes 
