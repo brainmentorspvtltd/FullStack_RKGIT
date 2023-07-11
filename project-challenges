@@ -1,0 +1,23 @@
+1. Dashboard 
+Reference - https://themewagon.com/wp-content/uploads/2021/11/html.design.jpg
+MUI Grid System Hint
+
+2. Need Links for Every Operations
+a) Add Note
+b) Delete Note
+c) View Note
+
+On Every HyperLink it connect to the Component
+
+3. Notes must be store on Server, So Notes will be Fetch from the Server.
+React FrontEnd Connect the Backend
+
+
+4. Login with Google Option , then User Login and Enter in DashBoard
+
+5. During Add we need to validate the Form.
+
+6. Date Picker and Color Picker Need to be Integerate.
+
+7. All Notes Data how share b/w the Components.
+
