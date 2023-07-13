@@ -1,0 +1,5 @@
+1. Provide a Link of Arrangement in DashBoard Screen , When u click on a Link it open a Arrangement Component, 
+and it display the records along with sort button , when u click on sort button it will sort the records in A-Z Order (title wise) 
+and when u click again it will arrange in (Z-A Order)
+2. Provide a Link of Search in DashBoard Screen, it show all the records and we can filter records by Title or Id ,
+also we can clear the search.
