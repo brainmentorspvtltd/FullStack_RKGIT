@@ -1,0 +1,16 @@
+Build a User CRUD WebService
+a) Add a User (Register a New User Feature) . It Check the User is not already exist
+Email , Password, Name , Phone
+Mongoose Level Validations Need to be Add (Email must be Unique, Required and Well Format Email)
+Password Must be >=8 and <=25
+Name is Only Alphabet >=3 and <=25
+Phone Must be 10 Digit Long.
+
+b) View User (View User Profile) Feature Based on Email
+
+c) Update User Password (Set a New Password)
+
+d) Delete a User Based on Email Id
+
+All the WebServices are test on Post Man.
+
