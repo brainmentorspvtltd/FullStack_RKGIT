@@ -6,6 +6,9 @@ Password Must be >=8 and <=25
 Name is Only Alphabet >=3 and <=25
 Phone Must be 10 Digit Long.
 
+Password Must Be Encrypted Store in DB 
+Hint : Using Bcrypt
+
 b) View User (View User Profile) Feature Based on Email
 
 c) Update User Password (Set a New Password)
