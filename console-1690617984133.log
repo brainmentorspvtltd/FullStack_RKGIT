@@ -1,0 +1,53 @@
+const e = ()=>this;
+undefined
+const t = new e();
+VM117:1 Uncaught TypeError: e is not a constructor
+    at <anonymous>:1:11
+(anonymous) @ VM117:1
+e();
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+function r(){
+    console.log(this);
+}
+undefined
+const r2 = new r();
+VM202:2 r {}
+undefined
+r();
+VM202:2 Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+function Employee(id, name){
+    this.id = id;
+    this.name = name;
+}
+var e =new Employee(1001, "Ram");
+VM463:1 Uncaught SyntaxError: Identifier 'e' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM463:1
+function Employee(id, name){
+    this.id = id;
+    this.name = name;
+}
+var e2 =new Employee(1001, "Ram");
+undefined
+e2;
+Employee {id: 1001, name: 'Ram'}
+typeof Employee;
+'function'
+class Emp{
+    constructor(id, name){
+        this.id = id;
+        this.name = name;
+    }
+}
+undefined
+var r2 = new Emp(1002, "AA");
+VM679:1 Uncaught SyntaxError: Identifier 'r2' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM679:1
+var r3 = new Emp(1002, "AA");
+undefined
+r3;
+Emp {id: 1002, name: 'AA'}
+typeof Emp;
+'function'
